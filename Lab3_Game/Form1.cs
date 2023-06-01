@@ -19,5 +19,11 @@ namespace Lab3_Game
             ucPlayingScreen1.Show();
             ucPlayingScreen1.BringToFront();
         }
+
+        private void ucHomeScreen1_lbDictionary_click(object sender, EventArgs e)
+        {
+            ucDictionary1.Show();
+            ucDictionary1.BringToFront();
+        }
     }
 }
