@@ -25,5 +25,10 @@ namespace Lab3_Game
             ucDictionary1.Show();
             ucDictionary1.BringToFront();
         }
+
+        private void ucDictionary1_ucDictionary_load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
