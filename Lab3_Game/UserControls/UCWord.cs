@@ -46,5 +46,10 @@ namespace Lab3_Game.UserControls
         {
 
         }
+
+        private void lbTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
