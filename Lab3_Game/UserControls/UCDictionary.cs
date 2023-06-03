@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -61,6 +63,12 @@ namespace Lab3_Game.UserControls
             }
         }
 
+        private void WriteFile(String str)
+        {
+            File.AppendAllText("animal.txt","\n" + str);
+            MessageBox.Show("Tạo thành công");
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             type = "fruit";
@@ -77,6 +85,37 @@ namespace Lab3_Game.UserControls
         {
             type = "animal";
             ReadFile();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            DialogResult result = openFileDialog.ShowDialog();
+            string destinationFolder = @"C:\Users\HP\Documents\GitHub\Lab-CSharp-1-FatChef\Lab3_Game\bin\Debug\Animals";
+            if (result == DialogResult.OK)
+            {
+                // Retrieve the selected file paths
+                string selectedFilePath = @openFileDialog.FileName;
+
+                // Get the file name from the selected file path
+                string fileName = Path.GetFileName(selectedFilePath);
+
+                //get type of image
+                string[] typeImage = fileName.Split(".");
+                //get the name from fileName textbox + type
+                string newFileName = tbNewWord.Text + "." + typeImage[1];
+
+                
+                // Construct the destination file path
+                string destinationFilePath = Path.Combine(destinationFolder, newFileName);
+
+                // Copy the file to the destination folder
+                File.Copy(selectedFilePath, destinationFilePath, true);
+
+                WriteFile(destinationFilePath);
+
+                MessageBox.Show("File copied successfully.");
+            }
         }
     }
 }
