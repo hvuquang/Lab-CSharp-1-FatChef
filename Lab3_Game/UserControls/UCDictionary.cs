@@ -42,25 +42,47 @@ namespace Lab3_Game.UserControls
             if (type == "fruit")
             {
                 str = File.ReadAllText("fruit.txt");
+                if (str != "")
+                {
+                    String[] items = str.Split('\n');
+                    for (int i = 0; i < items.Length; i++)
+                    {
+                        if (items[i] == "\n" || items[i] == "") continue;
+                        UCWord UCWord = new UCWord(items[i], type);
+                        flowLayoutPanel1.Controls.Add(UCWord);
+                    }
+                }
             }
             else if (type == "color")
             {
                 str = File.ReadAllText("color.txt");
+                if (str != "")
+                {
+                    String[] items = str.Split('\n');
+                    for (int i = 0; i < items.Length; i++)
+                    {
+                        if (items[i] == "\n" || items[i] == "")
+                            continue;
+                        UCWord UCWord = new UCWord(items[i], type);
+                        flowLayoutPanel1.Controls.Add(UCWord);
+                    }
+                }
             }
             else if (type == "animal")
             {
                 str = File.ReadAllText("animal.txt");
-            }
-            if (str != "")
-            {
-                String[] items = str.Split('\n');
-                MessageBox.Show(items.Length.ToString());
-                for (int i = 0; i < items.Length; i++)
+                if (str != "")
                 {
-                        UCWord UCWord = new UCWord(items[i]);
+                    String[] items = str.Split('\n');
+                    for (int i = 0; i < items.Length; i++)
+                    {
+                        if (items[i] == "\n" || items[i] == "") continue;
+                        UCWord UCWord = new UCWord(items[i], type);
                         flowLayoutPanel1.Controls.Add(UCWord);
+                    }
                 }
             }
+
         }
 
         private void WriteFile(String str)
@@ -166,6 +188,7 @@ namespace Lab3_Game.UserControls
 
                 // Copy the file to the destination folder
                 File.Copy(selectedFilePath, destinationFilePath, true);
+
 
                 WriteFile(destinationFilePath);
 
