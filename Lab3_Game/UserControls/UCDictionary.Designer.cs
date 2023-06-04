@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tbNewWord = new System.Windows.Forms.TextBox();
             this.lbBack = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -36,15 +39,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tbNewWord = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.tbNewWord);
             this.panel1.Controls.Add(this.lbBack);
@@ -53,6 +56,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1076, 90);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lab3_Game.Properties.Resources.add_button;
+            this.pictureBox1.Location = new System.Drawing.Point(653, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(761, 58);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(83, 25);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tbNewWord
+            // 
+            this.tbNewWord.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNewWord.Location = new System.Drawing.Point(423, 44);
+            this.tbNewWord.Name = "tbNewWord";
+            this.tbNewWord.PlaceholderText = "Thêm từ vựng";
+            this.tbNewWord.Size = new System.Drawing.Size(224, 39);
+            this.tbNewWord.TabIndex = 14;
             // 
             // lbBack
             // 
@@ -128,25 +161,8 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(656, 521);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(640, 521);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // tbNewWord
-            // 
-            this.tbNewWord.Location = new System.Drawing.Point(280, 59);
-            this.tbNewWord.Name = "tbNewWord";
-            this.tbNewWord.Size = new System.Drawing.Size(224, 25);
-            this.tbNewWord.TabIndex = 14;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(510, 59);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 25);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // UCDictionary
             // 
@@ -160,6 +176,7 @@
             this.Load += new System.EventHandler(this.UCDictionary_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -178,5 +195,6 @@
         private Button button2;
         private TextBox tbNewWord;
         private Button button4;
+        private PictureBox pictureBox1;
     }
 }

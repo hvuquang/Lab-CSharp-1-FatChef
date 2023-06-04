@@ -19,7 +19,7 @@ namespace Lab3_Game.UserControls
         public event EventHandler<EventArgs> lbback_click;
         public event EventHandler<EventArgs> ucDictionary_load;
 
-        private string type;
+        private string type = "fruit";
         public UCDictionary()
         {
             InitializeComponent();
@@ -65,7 +65,18 @@ namespace Lab3_Game.UserControls
 
         private void WriteFile(String str)
         {
-            File.AppendAllText("animal.txt","\n" + str);
+            if (type == "animal")
+            {
+                File.AppendAllText("animal.txt", "\n" + str);
+            }
+            else if (type == "fruit")
+            {
+                File.AppendAllText("fruit.txt", "\n" + str);
+            }
+            else if (type == "color")
+            {
+                File.AppendAllText("color.txt", "\n" + str);
+            }
             MessageBox.Show("Tạo thành công");
         }
 
@@ -89,9 +100,53 @@ namespace Lab3_Game.UserControls
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            //DialogResult result = openFileDialog.ShowDialog();
+            //string destinationFolder = @"C:\Users\HP\Documents\GitHub\Lab-CSharp-1-FatChef\Lab3_Game\bin\Debug\Animals";
+            //if (result == DialogResult.OK)
+            //{
+            //    // Retrieve the selected file paths
+            //    string selectedFilePath = @openFileDialog.FileName;
+
+            //    // Get the file name from the selected file path
+            //    string fileName = Path.GetFileName(selectedFilePath);
+
+            //    //get type of image
+            //    string[] typeImage = fileName.Split(".");
+            //    //get the name from fileName textbox + type
+            //    string newFileName = tbNewWord.Text + "." + typeImage[1];
+
+                
+            //    // Construct the destination file path
+            //    string destinationFilePath = Path.Combine(destinationFolder, newFileName);
+
+            //    // Copy the file to the destination folder
+            //    File.Copy(selectedFilePath, destinationFilePath, true);
+
+            //    WriteFile(destinationFilePath);
+
+            //    MessageBox.Show("File copied successfully.");
+            //}
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string destinationFolder = "";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             DialogResult result = openFileDialog.ShowDialog();
-            string destinationFolder = @"C:\Users\HP\Documents\GitHub\Lab-CSharp-1-FatChef\Lab3_Game\bin\Debug\Animals";
+
+            if (type == "fruit")
+            {
+                destinationFolder = @"C:\Users\HP\Documents\GitHub\Lab-CSharp-1-FatChef\Lab3_Game\bin\Debug\Fruits";
+            }
+            else if (type == "animal")
+            {
+                destinationFolder = @"C:\Users\HP\Documents\GitHub\Lab-CSharp-1-FatChef\Lab3_Game\bin\Debug\Animals";
+            }
+            else if (type == "color")
+            {
+                destinationFolder = @"C:\Users\HP\Documents\GitHub\Lab-CSharp-1-FatChef\Lab3_Game\bin\Debug\Colors";
+            }
             if (result == DialogResult.OK)
             {
                 // Retrieve the selected file paths
@@ -105,7 +160,7 @@ namespace Lab3_Game.UserControls
                 //get the name from fileName textbox + type
                 string newFileName = tbNewWord.Text + "." + typeImage[1];
 
-                
+
                 // Construct the destination file path
                 string destinationFilePath = Path.Combine(destinationFolder, newFileName);
 
