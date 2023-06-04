@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.tbNewWord = new System.Windows.Forms.TextBox();
             this.lbBack = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,7 +47,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.tbNewWord);
             this.panel1.Controls.Add(this.lbBack);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -68,23 +66,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(761, 58);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 25);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // tbNewWord
             // 
             this.tbNewWord.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbNewWord.Location = new System.Drawing.Point(423, 44);
+            this.tbNewWord.Location = new System.Drawing.Point(280, 44);
             this.tbNewWord.Name = "tbNewWord";
             this.tbNewWord.PlaceholderText = "Thêm từ vựng";
-            this.tbNewWord.Size = new System.Drawing.Size(224, 39);
+            this.tbNewWord.Size = new System.Drawing.Size(367, 39);
             this.tbNewWord.TabIndex = 14;
             // 
             // lbBack
@@ -194,7 +182,6 @@
         private Button button3;
         private Button button2;
         private TextBox tbNewWord;
-        private Button button4;
         private PictureBox pictureBox1;
     }
 }
