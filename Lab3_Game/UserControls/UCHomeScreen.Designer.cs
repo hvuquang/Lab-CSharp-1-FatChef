@@ -32,11 +32,11 @@
             this.lbAchievement = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbAnimal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbFruit = new System.Windows.Forms.Label();
+            this.lbColor = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -108,17 +108,18 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Vehicles";
             // 
-            // label7
+            // lbAnimal
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label7.Location = new System.Drawing.Point(561, 530);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 31);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Animals";
+            this.lbAnimal.AutoSize = true;
+            this.lbAnimal.BackColor = System.Drawing.Color.Transparent;
+            this.lbAnimal.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbAnimal.ForeColor = System.Drawing.Color.Chartreuse;
+            this.lbAnimal.Location = new System.Drawing.Point(561, 530);
+            this.lbAnimal.Name = "lbAnimal";
+            this.lbAnimal.Size = new System.Drawing.Size(96, 31);
+            this.lbAnimal.TabIndex = 17;
+            this.lbAnimal.Text = "Animals";
+            this.lbAnimal.Click += new System.EventHandler(this.lbAnimal_Click);
             // 
             // label6
             // 
@@ -144,29 +145,31 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Vegetables";
             // 
-            // label4
+            // lbFruit
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label4.Location = new System.Drawing.Point(694, 389);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 31);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Fruits";
+            this.lbFruit.AutoSize = true;
+            this.lbFruit.BackColor = System.Drawing.Color.Transparent;
+            this.lbFruit.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbFruit.ForeColor = System.Drawing.Color.Chartreuse;
+            this.lbFruit.Location = new System.Drawing.Point(694, 389);
+            this.lbFruit.Name = "lbFruit";
+            this.lbFruit.Size = new System.Drawing.Size(72, 31);
+            this.lbFruit.TabIndex = 14;
+            this.lbFruit.Text = "Fruits";
+            this.lbFruit.Click += new System.EventHandler(this.lbFruit_Click);
             // 
-            // label3
+            // lbColor
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label3.Location = new System.Drawing.Point(561, 389);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 31);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Colors";
+            this.lbColor.AutoSize = true;
+            this.lbColor.BackColor = System.Drawing.Color.Transparent;
+            this.lbColor.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbColor.ForeColor = System.Drawing.Color.Chartreuse;
+            this.lbColor.Location = new System.Drawing.Point(561, 389);
+            this.lbColor.Name = "lbColor";
+            this.lbColor.Size = new System.Drawing.Size(81, 31);
+            this.lbColor.TabIndex = 13;
+            this.lbColor.Text = "Colors";
+            this.lbColor.Click += new System.EventHandler(this.lbColor_Click);
             // 
             // label2
             // 
@@ -215,6 +218,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::Lab3_Game.Properties.Resources.Violet;
             this.pictureBox3.Location = new System.Drawing.Point(551, 276);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 100);
@@ -249,9 +253,11 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Image = global::Lab3_Game.Properties.Resources.Starfish;
             this.pictureBox7.Location = new System.Drawing.Point(551, 427);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 28;
             this.pictureBox7.TabStop = false;
             // 
@@ -291,11 +297,11 @@
             this.Controls.Add(this.lbAchievement);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbAnimal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbFruit);
+            this.Controls.Add(this.lbColor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UCHomeScreen";
@@ -320,11 +326,11 @@
         private Label lbAchievement;
         private Label label9;
         private Label label8;
-        private Label label7;
+        private Label lbAnimal;
         private Label label6;
         private Label label5;
-        private Label label4;
-        private Label label3;
+        private Label lbFruit;
+        private Label lbColor;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;

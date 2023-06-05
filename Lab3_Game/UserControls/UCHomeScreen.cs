@@ -14,8 +14,13 @@ namespace Lab3_Game.UserControls
     public partial class UCHomeScreen : UserControl
     {
         public event EventHandler<EventArgs> label2_click;
+        public event EventHandler<EventArgs> lbColor_click;
+        public event EventHandler<EventArgs> lbFruit_click;
+        public event EventHandler<EventArgs> lbAnimal_click;
         public event EventHandler<EventArgs> lbDictionary_click;
         public bool isMute = false;
+
+
         public UCHomeScreen()
         {
             InitializeComponent();
@@ -51,6 +56,30 @@ namespace Lab3_Game.UserControls
             if (lbDictionary_click != null)
             {
                 lbDictionary_click.Invoke(this, e);
+            }
+        }
+
+        private void lbColor_Click(object sender, EventArgs e)
+        {
+            if (lbColor_click != null)
+            {
+                lbColor_click.Invoke(this, e);
+            }
+        }
+
+        private void lbFruit_Click(object sender, EventArgs e)
+        {
+            if (lbFruit_click != null)
+            {
+                lbFruit_click.Invoke(this, e);
+            }
+        }
+
+        private void lbAnimal_Click(object sender, EventArgs e)
+        {
+            if (lbAnimal_click != null)
+            {
+                lbAnimal_click.Invoke(this, e);
             }
         }
     }

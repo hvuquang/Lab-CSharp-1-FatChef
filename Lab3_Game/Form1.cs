@@ -28,7 +28,32 @@ namespace Lab3_Game
 
         private void ucDictionary1_ucDictionary_load(object sender, EventArgs e)
         {
+            //ucPlayingScreen1.Show();
+            //ucPlayingScreen1.BringToFront();
+        }
 
+        private void ucHomeScreen1_lbAnimal_click(object sender, EventArgs e)
+        {
+            ucHomeScreen1.Hide();
+            ucPlayingScreen1 = new UserControls.UCPlayingScreen("animal");
+            ucPlayingScreen1.Show();
+            ucPlayingScreen1.BringToFront();
+        }
+
+        private void ucHomeScreen1_lbColor_click(object sender, EventArgs e)
+        {
+            ucHomeScreen1.Hide();
+            ucPlayingScreen1 = new UserControls.UCPlayingScreen("color");
+            ucPlayingScreen1.Show();
+            ucPlayingScreen1.BringToFront();
+        }
+
+        private void ucHomeScreen1_lbFruit_click(object sender, EventArgs e)
+        {
+            ucHomeScreen1.Hide();
+            ucPlayingScreen1 = new UserControls.UCPlayingScreen("fruit");
+            ucPlayingScreen1.Show();
+            ucPlayingScreen1.BringToFront();
         }
     }
 }
