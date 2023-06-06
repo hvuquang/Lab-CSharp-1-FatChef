@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbWord = new System.Windows.Forms.PictureBox();
@@ -46,6 +47,9 @@
             this.pbIsCorrect3 = new System.Windows.Forms.PictureBox();
             this.pbIsCorrect4 = new System.Windows.Forms.PictureBox();
             this.pbIsCorrect5 = new System.Windows.Forms.PictureBox();
+            this.lbHint = new System.Windows.Forms.Label();
+            this.timer1_Tick = new System.Windows.Forms.Timer(this.components);
+            this.countdownLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbWord)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,7 +86,7 @@
             // 
             // pbWord
             // 
-            this.pbWord.Location = new System.Drawing.Point(353, 134);
+            this.pbWord.Location = new System.Drawing.Point(356, 103);
             this.pbWord.Name = "pbWord";
             this.pbWord.Size = new System.Drawing.Size(233, 243);
             this.pbWord.TabIndex = 4;
@@ -105,7 +109,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tbAnswer);
-            this.panel1.Location = new System.Drawing.Point(282, 403);
+            this.panel1.Location = new System.Drawing.Point(292, 450);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(357, 57);
@@ -196,7 +200,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(411, 502);
+            this.button1.Location = new System.Drawing.Point(403, 528);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 50);
@@ -265,6 +269,33 @@
             this.pbIsCorrect5.TabIndex = 29;
             this.pbIsCorrect5.TabStop = false;
             // 
+            // lbHint
+            // 
+            this.lbHint.AutoSize = true;
+            this.lbHint.BackColor = System.Drawing.Color.Transparent;
+            this.lbHint.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbHint.ForeColor = System.Drawing.Color.Salmon;
+            this.lbHint.Location = new System.Drawing.Point(403, 382);
+            this.lbHint.Name = "lbHint";
+            this.lbHint.Size = new System.Drawing.Size(139, 31);
+            this.lbHint.TabIndex = 30;
+            this.lbHint.Text = "Hint: --ange";
+            // 
+            // timer1_Tick
+            // 
+            this.timer1_Tick.Tick += new System.EventHandler(this.timer1_Tick_Tick);
+            // 
+            // countdownLabel
+            // 
+            this.countdownLabel.AutoSize = true;
+            this.countdownLabel.BackColor = System.Drawing.Color.Transparent;
+            this.countdownLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.countdownLabel.ForeColor = System.Drawing.Color.White;
+            this.countdownLabel.Location = new System.Drawing.Point(768, 45);
+            this.countdownLabel.Name = "countdownLabel";
+            this.countdownLabel.Size = new System.Drawing.Size(0, 31);
+            this.countdownLabel.TabIndex = 31;
+            // 
             // UCPlayingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -272,6 +303,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Lab3_Game.Properties.Resources._11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.countdownLabel);
+            this.Controls.Add(this.lbHint);
             this.Controls.Add(this.pbIsCorrect5);
             this.Controls.Add(this.pbIsCorrect4);
             this.Controls.Add(this.pbIsCorrect3);
@@ -325,5 +358,8 @@
         private PictureBox pbIsCorrect3;
         private PictureBox pbIsCorrect4;
         private PictureBox pbIsCorrect5;
+        private Label lbHint;
+        private System.Windows.Forms.Timer timer1_Tick;
+        private Label countdownLabel;
     }
 }

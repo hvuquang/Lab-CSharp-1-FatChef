@@ -28,6 +28,8 @@ namespace Lab3_Game.UserControls
         private int correctAnswer = 0;
         private string mode = "";
         private Image wrongImg = Properties.Resources.wrong;
+        private int countdownSeconds = 60;
+        private int remainingSeconds;
         public UCPlayingScreen()
         {
             InitializeComponent();
@@ -51,7 +53,6 @@ namespace Lab3_Game.UserControls
         public UCPlayingScreen(string type, string mode)
         {
             InitializeComponent();
-            MessageBox.Show(mode);
             Type = type;
             questions = new string[5];
             increImage = 0;
@@ -60,8 +61,41 @@ namespace Lab3_Game.UserControls
             pbIsCorrect3.Visible = false;
             pbIsCorrect4.Visible = false;
             pbIsCorrect5.Visible = false;
+            remainingSeconds = countdownSeconds;
+            playModeUI(mode);
             ReadFile(Type);
             loadQuestion();
+
+        }
+
+        private void updateCountDownLabel()
+        {
+            TimeSpan timeSpan = TimeSpan.FromSeconds(remainingSeconds);
+            string formattedTime = timeSpan.ToString(@"mm\:ss");
+
+            countdownLabel.Text = formattedTime;
+        }
+
+        private void playModeUI(string mode)
+        {
+            this.mode = mode;
+            if (mode == "easy")
+            {
+                countdownLabel.Visible = false;
+            }
+            else if (mode == "medium")
+            {
+                lbHint.Visible = false;
+                countdownLabel.Visible = false;
+            }
+            else if (mode == "hard")
+            {
+                MessageBox.Show("In this mode, you will have 60s for 5 questions.\nEach wrong answer will minus you 10 points");
+                lbHint.Visible = false;
+                countdownLabel.Visible = true;
+                updateCountDownLabel();
+                timer1_Tick.Start();
+            }
         }
 
         private void ReadFile(string type)
@@ -217,6 +251,12 @@ namespace Lab3_Game.UserControls
             else
             {
                 wrongSound.Play();
+                if (mode =="hard")
+                {
+                    score -= 10;
+                    label1.Text = "Score: " + score.ToString() + " / 100";
+                }
+
                 if (increImage == 0)
                 {
                     pbIsCorrect1.Image = wrongImg;
@@ -246,6 +286,20 @@ namespace Lab3_Game.UserControls
                 tbAnswer.Text = "";
                 increImage += 1;
                 loadQuestion();
+            }
+        }
+
+        private void timer1_Tick_Tick(object sender, EventArgs e)
+        {
+            remainingSeconds--;
+            if (remainingSeconds >= 0)
+            {
+                updateCountDownLabel();
+            }
+            else
+            {
+                timer1_Tick.Stop();
+                //countdown end
             }
         }
     }
