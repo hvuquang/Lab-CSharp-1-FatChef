@@ -39,10 +39,14 @@ namespace Lab3_Game
             ucHomeScreen1.Hide();
             ucDictionary1.Hide();
             ucPlayingScreen1.Hide();
-            UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("animal");
-            ucPlayingScreen2.Show();
-            ucPlayingScreen2.BringToFront();
-            this.Controls.Add(ucPlayingScreen2);
+            UCPlayMode ucPlayMode = new UCPlayMode("animal");
+            ucPlayMode.Show();
+            ucPlayMode.BringToFront();
+            this.Controls.Add(ucPlayMode);
+            //UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("animal");
+            //ucPlayingScreen2.Show();
+            //ucPlayingScreen2.BringToFront();
+            //this.Controls.Add(ucPlayingScreen2);
         }
 
         private void ucHomeScreen1_lbColor_click(object sender, EventArgs e)
@@ -50,10 +54,14 @@ namespace Lab3_Game
             ucHomeScreen1.Hide();
             ucDictionary1.Hide();
             ucPlayingScreen1.Hide();
-            UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("color");
-            ucPlayingScreen2.Show();
-            ucPlayingScreen2.BringToFront();
-            this.Controls.Add(ucPlayingScreen2);
+            UCPlayMode ucPlayMode = new UCPlayMode("color");
+            ucPlayMode.Show();
+            ucPlayMode.BringToFront();
+            this.Controls.Add(ucPlayMode);
+            //UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("color");
+            //ucPlayingScreen2.Show();
+            //ucPlayingScreen2.BringToFront();
+            //this.Controls.Add(ucPlayingScreen2);
         }
 
         private void ucHomeScreen1_lbFruit_click(object sender, EventArgs e)
@@ -61,10 +69,14 @@ namespace Lab3_Game
             ucHomeScreen1.Hide();
             ucDictionary1.Hide();
             ucPlayingScreen1.Hide();
-            UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("fruit");
-            ucPlayingScreen2.Show();
-            ucPlayingScreen2.BringToFront();
-            this.Controls.Add(ucPlayingScreen2);
+            UCPlayMode ucPlayMode = new UCPlayMode("fruit");
+            ucPlayMode.Show();
+            ucPlayMode.BringToFront();
+            this.Controls.Add(ucPlayMode);
+            //UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("fruit");
+            //ucPlayingScreen2.Show();
+            //ucPlayingScreen2.BringToFront();
+            //this.Controls.Add(ucPlayingScreen2);
         }
     }
 }

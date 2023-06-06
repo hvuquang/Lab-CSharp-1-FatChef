@@ -26,6 +26,7 @@ namespace Lab3_Game.UserControls
         private int increImage = 0;
         private int score = 0;
         private int correctAnswer = 0;
+        private string mode = "";
         private Image wrongImg = Properties.Resources.wrong;
         public UCPlayingScreen()
         {
@@ -46,6 +47,23 @@ namespace Lab3_Game.UserControls
             ReadFile(Type);
             loadQuestion();
         }
+
+        public UCPlayingScreen(string type, string mode)
+        {
+            InitializeComponent();
+            MessageBox.Show(mode);
+            Type = type;
+            questions = new string[5];
+            increImage = 0;
+            pbIsCorrect1.Visible = false;
+            pbIsCorrect2.Visible = false;
+            pbIsCorrect3.Visible = false;
+            pbIsCorrect4.Visible = false;
+            pbIsCorrect5.Visible = false;
+            ReadFile(Type);
+            loadQuestion();
+        }
+
         private void ReadFile(string type)
         {
             String str = "";
