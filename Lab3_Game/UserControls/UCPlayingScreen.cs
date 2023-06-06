@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,11 @@ namespace Lab3_Game.UserControls
         public string Type { get { return _type; } set { _type = value; } }
 
         private string[] questions;
-
+        private string fileName = "";
+        private int increImage = 0;
+        private int score = 0;
+        private int correctAnswer = 0;
+        private Image wrongImg = Properties.Resources.wrong;
         public UCPlayingScreen()
         {
             InitializeComponent();
@@ -32,14 +37,21 @@ namespace Lab3_Game.UserControls
             InitializeComponent();
             Type = type;
             questions = new string[5];
+            increImage = 0;
+            pbIsCorrect1.Visible = false;
+            pbIsCorrect2.Visible = false;
+            pbIsCorrect3.Visible = false;
+            pbIsCorrect4.Visible = false;
+            pbIsCorrect5.Visible = false;
             ReadFile(Type);
+            loadQuestion();
         }
         private void ReadFile(string type)
         {
             String str = "";
             int j = 0;
             string file = "";
-
+            string questionInFile = "";
             if (type == "fruit")
             {
                 file = "fruit.txt";
@@ -78,13 +90,11 @@ namespace Lab3_Game.UserControls
                     //xóa giá trị đã lấy
                     validStrInFile = validStrInFile.Where(n => n != valueRandomItem).ToArray();
                     questions[i] = items[valueRandomItem];
+                    questionInFile += questions[i] + "\n";
                 }
             }
-            MessageBox.Show(questions[1]);
-            MessageBox.Show(questions[2]);
-            MessageBox.Show(questions[3]);
-            MessageBox.Show(questions[4]);
-            MessageBox.Show(questions[0]);
+            File.WriteAllText("questions.txt", "");
+            File.WriteAllText("questions.txt", questionInFile);
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -92,6 +102,7 @@ namespace Lab3_Game.UserControls
             if (back_click != null)
             {
                 back_click.Invoke(this, e);
+                pbWord.Image = null;
             }
         }
 
@@ -109,6 +120,114 @@ namespace Lab3_Game.UserControls
             {
                 pictureBox2.Image = Properties.Resources.mute;
                 player.Stop();
+            }
+        }
+
+        private void loadQuestion()
+        {
+            if (increImage >= 5)
+            {
+                button1.Text = "DONE";
+                return;
+            }
+            String str = "";
+            str = File.ReadAllText("questions.txt");
+            if (str != "")
+            {
+                String[] items = str.Split('\n');
+                string filePath = items[increImage];
+                filePath = filePath.Replace("\r", "");
+                Image image = Image.FromFile(filePath);
+                fileName = Path.GetFileName(filePath);
+                string[] subStrings = fileName.Split(".");
+                fileName = subStrings[0];
+                pbWord.Image = image;
+                pbWord.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string soundCorrectPath = @"C:\\Users\\HP\\Documents\\GitHub\\Lab-CSharp-1-FatChef\\correct.wav";
+            string soundWrongPath = @"C:\\Users\\HP\\Documents\\GitHub\\Lab-CSharp-1-FatChef\\wrong.wav";
+            SoundPlayer correctSound = new SoundPlayer(soundCorrectPath);
+            SoundPlayer wrongSound = new SoundPlayer(soundWrongPath);
+            if (increImage >= 5)
+            {
+                this.Hide();
+                Form1 f = new Form1();
+                f.ShowDialog();
+                UCHomeScreen screen = new UCHomeScreen();
+                screen.Show();
+                screen.BringToFront();
+                f.Controls.Add(screen);
+                return;
+            }
+            else
+            if (tbAnswer.Text.ToLower() == fileName.ToLower())
+            {
+                correctSound.Play();
+                score += 20;
+                correctAnswer += 1;
+                label2.Text = "Question: " + correctAnswer.ToString() + " / 5";
+                label1.Text = "Score: " + score.ToString() + " / 100";
+                MessageBox.Show("Correct Answer");
+                if (increImage == 0)
+                {
+                    pbIsCorrect1.Visible = true;
+                }
+                else if (increImage == 1)
+                {
+                    pbIsCorrect2.Visible = true;
+                }
+                else if (increImage == 2)
+                {
+                    pbIsCorrect3.Visible = true;
+                }
+                else if (increImage == 3)
+                {
+                    pbIsCorrect4.Visible = true;
+                }
+                else if (increImage == 4)
+                {
+                    pbIsCorrect5.Visible = true;
+                }
+                tbAnswer.Text = "";
+                increImage += 1;
+                loadQuestion();
+            }
+            else
+            {
+                wrongSound.Play();
+                if (increImage == 0)
+                {
+                    pbIsCorrect1.Image = wrongImg;
+                    pbIsCorrect1.Visible = true;
+                }
+                else if (increImage == 1)
+                {
+                    pbIsCorrect2.Image = wrongImg;
+                    pbIsCorrect2.Visible = true;
+                }
+                else if (increImage == 2)
+                {
+                    pbIsCorrect3.Image = wrongImg;
+                    pbIsCorrect3.Visible = true;
+                }
+                else if (increImage == 3)
+                {
+                    pbIsCorrect4.Image = wrongImg;
+                    pbIsCorrect4.Visible = true;
+                }
+                else if (increImage == 4)
+                {
+                    pbIsCorrect5.Image = wrongImg;
+                    pbIsCorrect5.Visible = true;
+                }
+                MessageBox.Show("Wrong answer");
+                tbAnswer.Text = "";
+                increImage += 1;
+                loadQuestion();
             }
         }
     }

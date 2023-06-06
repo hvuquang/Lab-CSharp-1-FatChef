@@ -103,6 +103,16 @@ namespace Lab3_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap correct {
+            get {
+                object obj = ResourceManager.GetObject("correct", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fruit {
             get {
                 object obj = ResourceManager.GetObject("fruit", resourceCulture);
@@ -136,6 +146,16 @@ namespace Lab3_Game.Properties {
         internal static System.Drawing.Bitmap Violet {
             get {
                 object obj = ResourceManager.GetObject("Violet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wrong {
+            get {
+                object obj = ResourceManager.GetObject("wrong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

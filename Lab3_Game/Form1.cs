@@ -1,3 +1,5 @@
+using Lab3_Game.UserControls;
+
 namespace Lab3_Game
 {
     public partial class Form1 : Form
@@ -35,25 +37,34 @@ namespace Lab3_Game
         private void ucHomeScreen1_lbAnimal_click(object sender, EventArgs e)
         {
             ucHomeScreen1.Hide();
-            ucPlayingScreen1 = new UserControls.UCPlayingScreen("animal");
-            ucPlayingScreen1.Show();
-            ucPlayingScreen1.BringToFront();
+            ucDictionary1.Hide();
+            ucPlayingScreen1.Hide();
+            UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("animal");
+            ucPlayingScreen2.Show();
+            ucPlayingScreen2.BringToFront();
+            this.Controls.Add(ucPlayingScreen2);
         }
 
         private void ucHomeScreen1_lbColor_click(object sender, EventArgs e)
         {
             ucHomeScreen1.Hide();
-            ucPlayingScreen1 = new UserControls.UCPlayingScreen("color");
-            ucPlayingScreen1.Show();
-            ucPlayingScreen1.BringToFront();
+            ucDictionary1.Hide();
+            ucPlayingScreen1.Hide();
+            UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("color");
+            ucPlayingScreen2.Show();
+            ucPlayingScreen2.BringToFront();
+            this.Controls.Add(ucPlayingScreen2);
         }
 
         private void ucHomeScreen1_lbFruit_click(object sender, EventArgs e)
         {
             ucHomeScreen1.Hide();
-            ucPlayingScreen1 = new UserControls.UCPlayingScreen("fruit");
-            ucPlayingScreen1.Show();
-            ucPlayingScreen1.BringToFront();
+            ucDictionary1.Hide();
+            ucPlayingScreen1.Hide();
+            UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen("fruit");
+            ucPlayingScreen2.Show();
+            ucPlayingScreen2.BringToFront();
+            this.Controls.Add(ucPlayingScreen2);
         }
     }
 }
