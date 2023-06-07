@@ -183,6 +183,8 @@ namespace Lab3_Game.UserControls
             if (increImage >= 5)
             {
                 button1.Text = "DONE";
+                CongratulationForm congratulationForm = new CongratulationForm(correctAnswer,score);
+                congratulationForm.ShowDialog();
                 return;
             }
             String str = "";
