@@ -50,6 +50,7 @@
             this.lbHint = new System.Windows.Forms.Label();
             this.timer1_Tick = new System.Windows.Forms.Timer(this.components);
             this.countdownLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbWord)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbIsCorrect3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIsCorrect4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIsCorrect5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -121,7 +123,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(764, 149);
+            this.label3.Location = new System.Drawing.Point(767, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 31);
             this.label3.TabIndex = 7;
@@ -133,7 +135,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(764, 219);
+            this.label4.Location = new System.Drawing.Point(767, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 31);
             this.label4.TabIndex = 8;
@@ -145,7 +147,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(764, 289);
+            this.label5.Location = new System.Drawing.Point(767, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 31);
             this.label5.TabIndex = 9;
@@ -157,7 +159,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(764, 359);
+            this.label6.Location = new System.Drawing.Point(767, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 31);
             this.label6.TabIndex = 10;
@@ -169,7 +171,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(764, 429);
+            this.label7.Location = new System.Drawing.Point(767, 393);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 31);
             this.label7.TabIndex = 11;
@@ -200,7 +202,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(403, 528);
+            this.button1.Location = new System.Drawing.Point(420, 528);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 50);
@@ -213,7 +215,7 @@
             // 
             this.pbIsCorrect1.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect1.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect1.Location = new System.Drawing.Point(915, 139);
+            this.pbIsCorrect1.Location = new System.Drawing.Point(918, 103);
             this.pbIsCorrect1.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect1.Name = "pbIsCorrect1";
             this.pbIsCorrect1.Size = new System.Drawing.Size(49, 51);
@@ -225,7 +227,7 @@
             // 
             this.pbIsCorrect2.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect2.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect2.Location = new System.Drawing.Point(915, 210);
+            this.pbIsCorrect2.Location = new System.Drawing.Point(918, 174);
             this.pbIsCorrect2.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect2.Name = "pbIsCorrect2";
             this.pbIsCorrect2.Size = new System.Drawing.Size(49, 51);
@@ -237,7 +239,7 @@
             // 
             this.pbIsCorrect3.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect3.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect3.Location = new System.Drawing.Point(915, 279);
+            this.pbIsCorrect3.Location = new System.Drawing.Point(918, 243);
             this.pbIsCorrect3.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect3.Name = "pbIsCorrect3";
             this.pbIsCorrect3.Size = new System.Drawing.Size(49, 51);
@@ -249,7 +251,7 @@
             // 
             this.pbIsCorrect4.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect4.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect4.Location = new System.Drawing.Point(915, 347);
+            this.pbIsCorrect4.Location = new System.Drawing.Point(918, 311);
             this.pbIsCorrect4.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect4.Name = "pbIsCorrect4";
             this.pbIsCorrect4.Size = new System.Drawing.Size(49, 51);
@@ -261,7 +263,7 @@
             // 
             this.pbIsCorrect5.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect5.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect5.Location = new System.Drawing.Point(915, 429);
+            this.pbIsCorrect5.Location = new System.Drawing.Point(918, 393);
             this.pbIsCorrect5.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect5.Name = "pbIsCorrect5";
             this.pbIsCorrect5.Size = new System.Drawing.Size(49, 51);
@@ -296,6 +298,18 @@
             this.countdownLabel.Size = new System.Drawing.Size(0, 31);
             this.countdownLabel.TabIndex = 31;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Lab3_Game.Properties.Resources.add_button;
+            this.pictureBox1.Location = new System.Drawing.Point(588, 374);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // UCPlayingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -303,6 +317,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Lab3_Game.Properties.Resources._11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.countdownLabel);
             this.Controls.Add(this.lbHint);
             this.Controls.Add(this.pbIsCorrect5);
@@ -333,6 +348,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbIsCorrect3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIsCorrect4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIsCorrect5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +377,6 @@
         private Label lbHint;
         private System.Windows.Forms.Timer timer1_Tick;
         private Label countdownLabel;
+        private PictureBox pictureBox1;
     }
 }

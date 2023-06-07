@@ -30,6 +30,8 @@ namespace Lab3_Game.UserControls
         private Image wrongImg = Properties.Resources.wrong;
         private int countdownSeconds = 60;
         private int remainingSeconds;
+        private int[] hintChar;
+        private int iOfHintChar = 0;
         public UCPlayingScreen()
         {
             InitializeComponent();
@@ -78,6 +80,7 @@ namespace Lab3_Game.UserControls
 
         private void playModeUI(string mode)
         {
+            pictureBox1.Hide();
             this.mode = mode;
             if (mode == "easy")
             {
@@ -193,8 +196,56 @@ namespace Lab3_Game.UserControls
                 fileName = Path.GetFileName(filePath);
                 string[] subStrings = fileName.Split(".");
                 fileName = subStrings[0];
+                if (mode == "easy")
+                {
+                    //hintChar = new int[fileName.Length];
+                    displayHint(fileName);
+                }
                 pbWord.Image = image;
                 pbWord.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+        private void displayHint(string fileName)
+        { 
+            Random random = new Random();
+            int ranChar = random.Next(0, fileName.Length);
+            //if (hintChar != null)
+            //{
+            //    for (int i = 0; i < hintChar.Length; i++)
+            //    {
+            //        //so sánh thứ tự số gợi ý vs số random
+            //        if (hintChar[i] == ranChar)
+            //        {
+            //            ranChar = random.Next(0, fileName.Length);
+            //            i = 0;
+            //        }
+            //        else
+            //        {
+            //            hintChar[i + 1] = ranChar;
+            //            break;
+            //        }
+            //    }
+            //}
+            //MessageBox.Show(hintChar[0].ToString());
+            //MessageBox.Show(hintChar[1].ToString());
+            lbHint.Text = "Hint: ";
+            for (int i = 0; i < fileName.Length; i++)
+            {
+                if (iOfHintChar >= fileName.Length)
+                {
+                    MessageBox.Show("Out of hint");
+                    lbHint.Text = fileName;
+                    return;
+                }
+                else if (i == ranChar)
+                {
+                    lbHint.Text += fileName[i];
+                    //gán số thứ tự đã gợi ý vào hintChar
+                    //hintChar[iOfHintChar] = ranChar;
+                    //iOfHintChar++;
+                    continue;
+                }
+                lbHint.Text += " _ ";
             }
         }
 
@@ -301,6 +352,11 @@ namespace Lab3_Game.UserControls
                 timer1_Tick.Stop();
                 //countdown end
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            displayHint(fileName);
         }
     }
 }

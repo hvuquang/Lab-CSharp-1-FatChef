@@ -43,7 +43,7 @@ namespace Lab3_Game.UserControls
             UCPlayingScreen ucPlayingScreen2 = new UserControls.UCPlayingScreen(_type, "easy");
             ucPlayingScreen2.Show();
             ucPlayingScreen2.BringToFront();
-            ucPlayingScreen2.back_click += ucPlayingScreen2_back_click;
+            //ucPlayingScreen2.back_click += ucPlayingScreen2_back_click;
             this.Controls.Add(ucPlayingScreen2);
         }
 
