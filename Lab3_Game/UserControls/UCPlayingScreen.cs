@@ -81,6 +81,7 @@ namespace Lab3_Game.UserControls
 
         private void playModeUI(string mode)
         {
+            button1.Visible = false;
             pictureBox1.Hide();
             this.mode = mode;
             if (mode == "easy")
@@ -372,6 +373,99 @@ namespace Lab3_Game.UserControls
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             displayHint(fileName);
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string soundCorrectPath = @"C:\\Users\\HP\\Documents\\GitHub\\Lab-CSharp-1-FatChef\\correct.wav";
+            string soundWrongPath = @"C:\\Users\\HP\\Documents\\GitHub\\Lab-CSharp-1-FatChef\\wrong.wav";
+            SoundPlayer correctSound = new SoundPlayer(soundCorrectPath);
+            SoundPlayer wrongSound = new SoundPlayer(soundWrongPath);
+            correctSound.Stop();
+            wrongSound.Stop();
+            if (increImage >= 5)
+            {
+                this.Hide();
+                Form1 f = new Form1();
+                f.ShowDialog();
+                UCHomeScreen screen = new UCHomeScreen();
+                screen.Show();
+                screen.BringToFront();
+                f.Controls.Add(screen);
+                return;
+            }
+            else
+            if (tbAnswer.Text.ToLower() == fileName.ToLower())
+            {
+                correctSound.Play();
+                score += 20;
+                correctAnswer += 1;
+                label2.Text = "Question: " + correctAnswer.ToString() + " / 5";
+                label1.Text = "Score: " + score.ToString() + " / 100";
+                MessageBox.Show("Correct Answer");
+                if (increImage == 0)
+                {
+                    pbIsCorrect1.Visible = true;
+                }
+                else if (increImage == 1)
+                {
+                    pbIsCorrect2.Visible = true;
+                }
+                else if (increImage == 2)
+                {
+                    pbIsCorrect3.Visible = true;
+                }
+                else if (increImage == 3)
+                {
+                    pbIsCorrect4.Visible = true;
+                }
+                else if (increImage == 4)
+                {
+                    pbIsCorrect5.Visible = true;
+                }
+                tbAnswer.Text = "";
+                increImage += 1;
+                loadQuestion();
+            }
+            else
+            {
+                wrongSound.Play();
+                if (mode == "hard")
+                {
+                    score -= 10;
+                    label1.Text = "Score: " + score.ToString() + " / 100";
+                }
+
+                if (increImage == 0)
+                {
+                    pbIsCorrect1.Image = wrongImg;
+                    pbIsCorrect1.Visible = true;
+                }
+                else if (increImage == 1)
+                {
+                    pbIsCorrect2.Image = wrongImg;
+                    pbIsCorrect2.Visible = true;
+                }
+                else if (increImage == 2)
+                {
+                    pbIsCorrect3.Image = wrongImg;
+                    pbIsCorrect3.Visible = true;
+                }
+                else if (increImage == 3)
+                {
+                    pbIsCorrect4.Image = wrongImg;
+                    pbIsCorrect4.Visible = true;
+                }
+                else if (increImage == 4)
+                {
+                    pbIsCorrect5.Image = wrongImg;
+                    pbIsCorrect5.Visible = true;
+                }
+                MessageBox.Show("Wrong. The correct answer is " + fileName.ToLower());
+                tbAnswer.Text = "";
+                increImage += 1;
+                loadQuestion();
+            }
         }
     }
 }

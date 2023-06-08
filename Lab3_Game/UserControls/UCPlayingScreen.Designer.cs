@@ -51,6 +51,7 @@
             this.timer1_Tick = new System.Windows.Forms.Timer(this.components);
             this.countdownLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbWord)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -202,7 +203,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(420, 528);
+            this.button1.Location = new System.Drawing.Point(116, 528);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 50);
@@ -311,6 +312,20 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSubmit.ForeColor = System.Drawing.Color.Purple;
+            this.btnSubmit.Location = new System.Drawing.Point(400, 528);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(139, 53);
+            this.btnSubmit.TabIndex = 33;
+            this.btnSubmit.Text = "SUBMIT";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
             // UCPlayingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -318,6 +333,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Lab3_Game.Properties.Resources._11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.countdownLabel);
             this.Controls.Add(this.lbHint);
@@ -379,5 +395,6 @@
         private System.Windows.Forms.Timer timer1_Tick;
         private Label countdownLabel;
         private PictureBox pictureBox1;
+        private Button btnSubmit;
     }
 }

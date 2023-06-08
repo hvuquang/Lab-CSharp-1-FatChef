@@ -41,13 +41,13 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
             this.panel1.BackgroundImage = global::Lab3_Game.Properties.Resources._8;
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.tbNewWord);
             this.panel1.Controls.Add(this.lbBack);
@@ -61,7 +61,7 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.SlateBlue;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(344, 89);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(58, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(663, 518);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -155,6 +155,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(280, 90);
             this.panel3.Name = "panel3";
@@ -177,6 +178,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
