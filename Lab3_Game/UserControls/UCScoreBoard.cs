@@ -26,6 +26,7 @@ namespace Lab3_Game.UserControls
         {
             lvScoreboard.Items.Clear();
             string str = File.ReadAllText("fruitscoreboard.txt");
+            if (str == null) return;
             string[] itemsInFile = str.Split("\n");
             for (int i = 0; i < itemsInFile.Length; i++)
             {
@@ -46,6 +47,7 @@ namespace Lab3_Game.UserControls
         {
             lvScoreboard.Items.Clear();
             string str = File.ReadAllText("colorscoreboard.txt");
+            if (str == null) return;
             string[] itemsInFile = str.Split("\n");
             for (int i = 0; i < itemsInFile.Length; i++)
             {
@@ -67,6 +69,7 @@ namespace Lab3_Game.UserControls
         {
             lvScoreboard.Items.Clear();
             string str = File.ReadAllText("animalscoreboard.txt");
+            if (str == null) return;
             string[] itemsInFile = str.Split("\n");
             for (int i = 0; i < itemsInFile.Length; i++)
             {
@@ -83,5 +86,34 @@ namespace Lab3_Game.UserControls
             }
 
         }
+
+        public static void BubbleSort(int[] array)
+        {
+            int n = array.Length;
+            bool swapped;
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                swapped = false;
+
+                // Compare adjacent elements and swap them if they are in the wrong order
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (array[j] > array[j + 1])
+                    {
+                        // Swap array[j] and array[j+1]
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                        swapped = true;
+                    }
+                }
+
+                // If no two elements were swapped in the inner loop, the array is already sorted
+                if (!swapped)
+                    break;
+            }
+        }
+
     }
 }
