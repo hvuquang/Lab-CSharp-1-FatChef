@@ -32,11 +32,11 @@ namespace Lab3_Game.UserControls
             {
                 if (itemsInFile[i] == "") break;
                 string[] itemInItems = itemsInFile[i].Split("\t");
-                ListViewItem item = new ListViewItem(stt.ToString()); // Create a new ListViewItem with the value of Property1
+                ListViewItem item = new ListViewItem(i.ToString()); // Create a new ListViewItem with the value of Property1
                 stt++;
                 // Add sub-items for each property to populate the columns
-                item.SubItems.Add(itemInItems[0]); // Add sub-item with the value of Property2
-                item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property3
+                item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property2
+                item.SubItems.Add(itemInItems[0]); // Add sub-item with the value of Property3
                 item.SubItems.Add(itemInItems[2]); // Add sub-item with the value of Property4
                 // Add the item to the ListView
                 lvScoreboard.Items.Add(item);
@@ -53,11 +53,11 @@ namespace Lab3_Game.UserControls
             {
                 if (itemsInFile[i] == "") break;
                 string[] itemInItems = itemsInFile[i].Split("\t");
-                ListViewItem item = new ListViewItem(stt.ToString()); // Create a new ListViewItem with the value of Property1
+                ListViewItem item = new ListViewItem(i.ToString()); // Create a new ListViewItem with the value of Property1
                 stt++;
                 // Add sub-items for each property to populate the columns
-                item.SubItems.Add(itemInItems[0]); // Add sub-item with the value of Property2
-                item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property3
+                item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property2
+                item.SubItems.Add(itemInItems[0]); // Add sub-item with the value of Property3
                 item.SubItems.Add(itemInItems[2]); // Add sub-item with the value of Property4
                 // Add the item to the ListView
                 lvScoreboard.Items.Add(item);
@@ -75,11 +75,11 @@ namespace Lab3_Game.UserControls
             {
                 if (itemsInFile[i] == "") break;
                 string[] itemInItems = itemsInFile[i].Split("\t");
-                ListViewItem item = new ListViewItem(stt.ToString()); // Create a new ListViewItem with the value of Property1
+                ListViewItem item = new ListViewItem(i.ToString()); // Create a new ListViewItem with the value of Property1
                 stt++;
                 // Add sub-items for each property to populate the columns
-                item.SubItems.Add(itemInItems[0]); // Add sub-item with the value of Property2
-                item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property3
+                item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property2
+                item.SubItems.Add(itemInItems[0]); // Add sub-item with the value of Property3
                 item.SubItems.Add(itemInItems[2]); // Add sub-item with the value of Property4
                 // Add the item to the ListView
                 lvScoreboard.Items.Add(item);
