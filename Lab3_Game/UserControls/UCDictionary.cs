@@ -48,7 +48,7 @@ namespace Lab3_Game.UserControls
                     for (int i = 0; i < items.Length; i++)
                     {
                         if (items[i] == "\n" || items[i] == "") continue;
-                        UCWord UCWord = new UCWord(items[i], type);
+                        UCWord UCWord = new UCWord(items[i], type, tbNewWord.Text);
                         flowLayoutPanel1.Controls.Add(UCWord);
                     }
                 }
@@ -63,7 +63,7 @@ namespace Lab3_Game.UserControls
                     {
                         if (items[i] == "\n" || items[i] == "")
                             continue;
-                        UCWord UCWord = new UCWord(items[i], type);
+                        UCWord UCWord = new UCWord(items[i], type, tbNewWord.Text);
                         flowLayoutPanel1.Controls.Add(UCWord);
                     }
                 }
@@ -77,7 +77,7 @@ namespace Lab3_Game.UserControls
                     for (int i = 0; i < items.Length; i++)
                     {
                         if (items[i] == "\n" || items[i] == "") continue;
-                        UCWord UCWord = new UCWord(items[i], type);
+                        UCWord UCWord = new UCWord(items[i], type, tbNewWord.Text);
                         flowLayoutPanel1.Controls.Add(UCWord);
                     }
                 }
