@@ -13,6 +13,7 @@ namespace Lab3_Game.UserControls
 {
     public partial class UCScoreBoard : UserControl
     {
+        public event EventHandler btnback_click;
         private int stt = 1;
         //chưa click
 
@@ -32,8 +33,9 @@ namespace Lab3_Game.UserControls
             for (int i = 0; i < itemsInFile.Length; i++)
             {
                 if (itemsInFile[i] == "") break;
+                stt = i + 1;
                 string[] itemInItems = itemsInFile[i].Split("\t");
-                ListViewItem item = new ListViewItem(i.ToString()); // Create a new ListViewItem with the value of Property1
+                ListViewItem item = new ListViewItem(stt.ToString()); // Create a new ListViewItem with the value of Property1
                 stt++;
                 // Add sub-items for each property to populate the columns
                 item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property2
@@ -54,8 +56,9 @@ namespace Lab3_Game.UserControls
             for (int i = 0; i < itemsInFile.Length; i++)
             {
                 if (itemsInFile[i] == "") break;
+                stt = i + 1;
                 string[] itemInItems = itemsInFile[i].Split("\t");
-                ListViewItem item = new ListViewItem(i.ToString()); // Create a new ListViewItem with the value of Property1
+                ListViewItem item = new ListViewItem(stt.ToString()); // Create a new ListViewItem with the value of Property1
                 stt++;
                 // Add sub-items for each property to populate the columns
                 item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property2
@@ -77,8 +80,9 @@ namespace Lab3_Game.UserControls
             for (int i = 0; i < itemsInFile.Length; i++)
             {
                 if (itemsInFile[i] == "") break;
+                stt = i + 1;
                 string[] itemInItems = itemsInFile[i].Split("\t");
-                ListViewItem item = new ListViewItem(i.ToString()); // Create a new ListViewItem with the value of Property1
+                ListViewItem item = new ListViewItem(stt.ToString()); // Create a new ListViewItem with the value of Property1
                 stt++;
                 // Add sub-items for each property to populate the columns
                 item.SubItems.Add(itemInItems[1]); // Add sub-item with the value of Property2
@@ -125,5 +129,12 @@ namespace Lab3_Game.UserControls
 
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (btnback_click != null)
+            {
+                btnback_click.Invoke(this, e);
+            }
+        }
     }
 }

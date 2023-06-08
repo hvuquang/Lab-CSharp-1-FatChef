@@ -18,6 +18,7 @@ namespace Lab3_Game.UserControls
         public event EventHandler<EventArgs> lbFruit_click;
         public event EventHandler<EventArgs> lbAnimal_click;
         public event EventHandler<EventArgs> lbDictionary_click;
+        public event EventHandler<EventArgs> lbAchievement_click;
         public bool isMute = false;
 
 
@@ -85,11 +86,15 @@ namespace Lab3_Game.UserControls
 
         private void lbAchievement_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            UCScoreBoard board = new UCScoreBoard();
-            board.Show();
-            board.BringToFront();
-            this.Controls.Add(board);
+            if (lbAchievement_click != null)
+            {
+                lbAchievement_click.Invoke(this, e);
+            }
+            //this.Controls.Clear();
+            //UCScoreBoard board = new UCScoreBoard();
+            //board.Show();
+            //board.BringToFront();
+            //this.Controls.Add(board);
         }
     }
 }

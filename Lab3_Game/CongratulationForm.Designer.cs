@@ -52,7 +52,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(121, 111);
+            this.label3.Location = new System.Drawing.Point(127, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(216, 37);
             this.label3.TabIndex = 31;
@@ -64,7 +64,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(141, 167);
+            this.label4.Location = new System.Drawing.Point(140, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 37);
             this.label4.TabIndex = 32;

@@ -39,6 +39,7 @@ namespace Lab3_Game
             ucHomeScreen1.Hide();
             ucDictionary1.Hide();
             ucPlayingScreen1.Hide();
+            ucScoreBoard1.Hide();
             UCPlayMode ucPlayMode = new UCPlayMode("animal");
             ucPlayMode.Show();
             ucPlayMode.BringToFront();
@@ -54,6 +55,7 @@ namespace Lab3_Game
             ucHomeScreen1.Hide();
             ucDictionary1.Hide();
             ucPlayingScreen1.Hide();
+            ucScoreBoard1.Hide();
             UCPlayMode ucPlayMode = new UCPlayMode("color");
             ucPlayMode.Show();
             ucPlayMode.BringToFront();
@@ -69,6 +71,7 @@ namespace Lab3_Game
             ucHomeScreen1.Hide();
             ucDictionary1.Hide();
             ucPlayingScreen1.Hide();
+            ucScoreBoard1.Hide();
             UCPlayMode ucPlayMode = new UCPlayMode("fruit");
             ucPlayMode.Show();
             ucPlayMode.BringToFront();
@@ -77,6 +80,21 @@ namespace Lab3_Game
             //ucPlayingScreen2.Show();
             //ucPlayingScreen2.BringToFront();
             //this.Controls.Add(ucPlayingScreen2);
+        }
+
+        private void ucHomeScreen1_lbAchievement_click(object sender, EventArgs e)
+        {
+            ucHomeScreen1.Hide();
+            ucDictionary1.Hide();
+            ucPlayingScreen1.Hide();
+            ucScoreBoard1.Show();
+            ucScoreBoard1.BringToFront();
+        }
+
+        private void ucScoreBoard1_btnback_click(object sender, EventArgs e)
+        {
+            ucHomeScreen1.Show();
+            ucHomeScreen1.BringToFront();
         }
     }
 }
