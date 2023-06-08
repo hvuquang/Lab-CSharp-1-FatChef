@@ -113,7 +113,7 @@
             this.panel1.Controls.Add(this.tbAnswer);
             this.panel1.Location = new System.Drawing.Point(292, 450);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(357, 57);
             this.panel1.TabIndex = 6;
             // 
@@ -203,7 +203,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(420, 528);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 50);
             this.button1.TabIndex = 24;
@@ -216,7 +216,7 @@
             this.pbIsCorrect1.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect1.Image = global::Lab3_Game.Properties.Resources.correct;
             this.pbIsCorrect1.Location = new System.Drawing.Point(918, 103);
-            this.pbIsCorrect1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbIsCorrect1.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect1.Name = "pbIsCorrect1";
             this.pbIsCorrect1.Size = new System.Drawing.Size(49, 51);
             this.pbIsCorrect1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,7 +228,7 @@
             this.pbIsCorrect2.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect2.Image = global::Lab3_Game.Properties.Resources.correct;
             this.pbIsCorrect2.Location = new System.Drawing.Point(918, 174);
-            this.pbIsCorrect2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbIsCorrect2.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect2.Name = "pbIsCorrect2";
             this.pbIsCorrect2.Size = new System.Drawing.Size(49, 51);
             this.pbIsCorrect2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,7 +240,7 @@
             this.pbIsCorrect3.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect3.Image = global::Lab3_Game.Properties.Resources.correct;
             this.pbIsCorrect3.Location = new System.Drawing.Point(918, 243);
-            this.pbIsCorrect3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbIsCorrect3.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect3.Name = "pbIsCorrect3";
             this.pbIsCorrect3.Size = new System.Drawing.Size(49, 51);
             this.pbIsCorrect3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -252,7 +252,7 @@
             this.pbIsCorrect4.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect4.Image = global::Lab3_Game.Properties.Resources.correct;
             this.pbIsCorrect4.Location = new System.Drawing.Point(918, 311);
-            this.pbIsCorrect4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbIsCorrect4.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect4.Name = "pbIsCorrect4";
             this.pbIsCorrect4.Size = new System.Drawing.Size(49, 51);
             this.pbIsCorrect4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +264,7 @@
             this.pbIsCorrect5.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect5.Image = global::Lab3_Game.Properties.Resources.correct;
             this.pbIsCorrect5.Location = new System.Drawing.Point(918, 393);
-            this.pbIsCorrect5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbIsCorrect5.Margin = new System.Windows.Forms.Padding(2);
             this.pbIsCorrect5.Name = "pbIsCorrect5";
             this.pbIsCorrect5.Size = new System.Drawing.Size(49, 51);
             this.pbIsCorrect5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +277,7 @@
             this.lbHint.BackColor = System.Drawing.Color.Transparent;
             this.lbHint.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbHint.ForeColor = System.Drawing.Color.Salmon;
-            this.lbHint.Location = new System.Drawing.Point(356, 384);
+            this.lbHint.Location = new System.Drawing.Point(400, 393);
             this.lbHint.Name = "lbHint";
             this.lbHint.Size = new System.Drawing.Size(139, 31);
             this.lbHint.TabIndex = 30;
@@ -285,6 +285,7 @@
             // 
             // timer1_Tick
             // 
+            this.timer1_Tick.Interval = 1000;
             this.timer1_Tick.Tick += new System.EventHandler(this.timer1_Tick_Tick);
             // 
             // countdownLabel

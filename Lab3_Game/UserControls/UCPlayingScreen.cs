@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Media;
@@ -28,7 +29,7 @@ namespace Lab3_Game.UserControls
         private int correctAnswer = 0;
         private string mode = "";
         private Image wrongImg = Properties.Resources.wrong;
-        private int countdownSeconds = 60;
+        private int countdownSeconds = 50;
         private int remainingSeconds;
         private int[] hintChar;
         private int iOfHintChar = 0;
@@ -93,7 +94,7 @@ namespace Lab3_Game.UserControls
             }
             else if (mode == "hard")
             {
-                MessageBox.Show("In this mode, you will have 60s for 5 questions.\nEach wrong answer will minus you 10 points");
+                MessageBox.Show("In this mode, you will have 50s for 5 questions.\nEach wrong answer will minus you 10 points");
                 lbHint.Visible = false;
                 countdownLabel.Visible = true;
                 updateCountDownLabel();
@@ -199,6 +200,14 @@ namespace Lab3_Game.UserControls
                 fileName = subStrings[0];
                 if (mode == "easy")
                 {
+                    if (subStrings[0].Length >= 7)
+                    {
+                        lbHint.Location = new Point(400, 475);
+                    }
+                    else
+                    {
+
+                    }
                     //hintChar = new int[fileName.Length];
                     displayHint(fileName);
                 }
@@ -230,6 +239,7 @@ namespace Lab3_Game.UserControls
             //MessageBox.Show(hintChar[0].ToString());
             //MessageBox.Show(hintChar[1].ToString());
             lbHint.Text = "Hint: ";
+
             for (int i = 0; i < fileName.Length; i++)
             {
                 if (iOfHintChar >= fileName.Length)
@@ -336,7 +346,7 @@ namespace Lab3_Game.UserControls
                     pbIsCorrect5.Image = wrongImg;
                     pbIsCorrect5.Visible = true;
                 }
-                MessageBox.Show("Wrong answer");
+                MessageBox.Show("Wrong. The correct answer is " + fileName.ToLower());
                 tbAnswer.Text = "";
                 increImage += 1;
                 loadQuestion();
@@ -353,6 +363,8 @@ namespace Lab3_Game.UserControls
             else
             {
                 timer1_Tick.Stop();
+                CongratulationForm congratulationForm = new CongratulationForm(correctAnswer, score, mode, _type);
+                congratulationForm.ShowDialog();
                 //countdown end
             }
         }

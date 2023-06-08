@@ -95,6 +95,7 @@
             this.lvScoreboard.GridLines = true;
             this.lvScoreboard.Location = new System.Drawing.Point(315, 79);
             this.lvScoreboard.Name = "lvScoreboard";
+            this.lvScoreboard.Scrollable = false;
             this.lvScoreboard.Size = new System.Drawing.Size(573, 471);
             this.lvScoreboard.TabIndex = 6;
             this.lvScoreboard.UseCompatibleStateImageBehavior = false;
@@ -120,7 +121,7 @@
             // cTime
             // 
             this.cTime.Text = "Time";
-            this.cTime.Width = 300;
+            this.cTime.Width = 320;
             // 
             // btnBack
             // 

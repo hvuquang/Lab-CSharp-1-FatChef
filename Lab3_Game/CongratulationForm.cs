@@ -28,8 +28,8 @@ namespace Lab3_Game
             InitializeComponent();
             this.correctAnswer = correctAnswer;
             this.score = score;
-            label3.Text = correctAnswer.ToString() + " / 5";
-            label4.Text = score.ToString() + " / 100";
+            label3.Text = "Question: " + correctAnswer.ToString() + " / 5";
+            label4.Text = "Score: " + score.ToString() + " / 100";
         }
 
         public CongratulationForm(int correctAnswer, int score, string mode, string type)
@@ -37,8 +37,10 @@ namespace Lab3_Game
             InitializeComponent();
             this.correctAnswer = correctAnswer;
             this.score = score;
-            label3.Text = correctAnswer.ToString() + " / 5";
-            label4.Text = score.ToString() + " / 100";
+            label3.Text = "Question: " + correctAnswer.ToString() + " / 5";
+            label3.Location = new Point(74,100);
+            label4.Text = "Score: " + score.ToString() + " / 100";
+            label4.Location = new Point(74, 137);
             this.mode = mode;
             this.type = type;
             writeFile();

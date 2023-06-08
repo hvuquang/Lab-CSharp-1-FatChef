@@ -67,7 +67,6 @@ namespace Lab3_Game.UserControls
                 // Add the item to the ListView
                 lvScoreboard.Items.Add(item);
             }
-
         }
 
         private void btnAnimalScoreboard_Click(object sender, EventArgs e)
@@ -112,7 +111,6 @@ namespace Lab3_Game.UserControls
                     int score2 = Int32.Parse(itemInItems2[0].Trim());
                     if (score1 < score2)
                     {
-                        MessageBox.Show(score1.ToString());
                         // Swap array[j] and array[j+1]
                         string temp = array[j];
                         array[j] = array[j + 1];
