@@ -82,5 +82,14 @@ namespace Lab3_Game.UserControls
                 lbAnimal_click.Invoke(this, e);
             }
         }
+
+        private void lbAchievement_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            UCScoreBoard board = new UCScoreBoard();
+            board.Show();
+            board.BringToFront();
+            this.Controls.Add(board);
+        }
     }
 }

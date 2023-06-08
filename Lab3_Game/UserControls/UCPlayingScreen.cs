@@ -110,7 +110,6 @@ namespace Lab3_Game.UserControls
             if (type == "fruit")
             {
                 file = "fruit.txt";
-
             }
             else if (type == "color")
             {
@@ -183,7 +182,7 @@ namespace Lab3_Game.UserControls
             if (increImage >= 5)
             {
                 button1.Text = "DONE";
-                CongratulationForm congratulationForm = new CongratulationForm(correctAnswer,score);
+                CongratulationForm congratulationForm = new CongratulationForm(correctAnswer,score,mode, _type);
                 congratulationForm.ShowDialog();
                 return;
             }
@@ -257,6 +256,8 @@ namespace Lab3_Game.UserControls
             string soundWrongPath = @"C:\\Users\\HP\\Documents\\GitHub\\Lab-CSharp-1-FatChef\\wrong.wav";
             SoundPlayer correctSound = new SoundPlayer(soundCorrectPath);
             SoundPlayer wrongSound = new SoundPlayer(soundWrongPath);
+            correctSound.Stop();
+            wrongSound.Stop();
             if (increImage >= 5)
             {
                 this.Hide();
