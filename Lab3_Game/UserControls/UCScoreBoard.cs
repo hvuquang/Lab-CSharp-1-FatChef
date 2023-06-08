@@ -28,6 +28,7 @@ namespace Lab3_Game.UserControls
             string str = File.ReadAllText("fruitscoreboard.txt");
             if (str == null) return;
             string[] itemsInFile = str.Split("\n");
+            itemsInFile = BubbleSort(itemsInFile);
             for (int i = 0; i < itemsInFile.Length; i++)
             {
                 if (itemsInFile[i] == "") break;
@@ -49,6 +50,7 @@ namespace Lab3_Game.UserControls
             string str = File.ReadAllText("colorscoreboard.txt");
             if (str == null) return;
             string[] itemsInFile = str.Split("\n");
+            itemsInFile = BubbleSort(itemsInFile);
             for (int i = 0; i < itemsInFile.Length; i++)
             {
                 if (itemsInFile[i] == "") break;
@@ -71,6 +73,7 @@ namespace Lab3_Game.UserControls
             string str = File.ReadAllText("animalscoreboard.txt");
             if (str == null) return;
             string[] itemsInFile = str.Split("\n");
+            itemsInFile = BubbleSort(itemsInFile);
             for (int i = 0; i < itemsInFile.Length; i++)
             {
                 if (itemsInFile[i] == "") break;
@@ -87,22 +90,27 @@ namespace Lab3_Game.UserControls
 
         }
 
-        public static void BubbleSort(int[] array)
+        public static string[] BubbleSort(string[] array)
         {
-            int n = array.Length;
+            int length = array.Length;
             bool swapped;
 
-            for (int i = 0; i < n - 1; i++)
+            for (int i = 0; i < length - 1; i++)
             {
                 swapped = false;
-
                 // Compare adjacent elements and swap them if they are in the wrong order
-                for (int j = 0; j < n - i - 1; j++)
+                for (int j = 0; j < length - i - 1; j++)
                 {
-                    if (array[j] > array[j + 1])
+                    string[] itemInItems1 = array[j].Split("\t");
+                    int score1 = Int32.Parse(itemInItems1[0]);
+                    if (j + 1 >= length - i - 1) break;
+                    string[] itemInItems2 = array[j + 1].Split("\t");
+                    int score2 = Int32.Parse(itemInItems2[0].Trim());
+                    if (score1 < score2)
                     {
+                        MessageBox.Show(score1.ToString());
                         // Swap array[j] and array[j+1]
-                        int temp = array[j];
+                        string temp = array[j];
                         array[j] = array[j + 1];
                         array[j + 1] = temp;
                         swapped = true;
@@ -113,6 +121,8 @@ namespace Lab3_Game.UserControls
                 if (!swapped)
                     break;
             }
+            return array;
+
         }
 
     }
