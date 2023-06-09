@@ -117,6 +117,7 @@
             this.Controls.Add(this.tbNewWord);
             this.Controls.Add(this.ucHomeScreen1);
             this.Name = "EditWord";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditWord";
             this.ResumeLayout(false);
             this.PerformLayout();

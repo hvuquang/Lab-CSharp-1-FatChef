@@ -19,6 +19,7 @@ namespace Lab3_Game.UserControls
         public event EventHandler<EventArgs> lbAnimal_click;
         public event EventHandler<EventArgs> lbDictionary_click;
         public event EventHandler<EventArgs> lbAchievement_click;
+        public event EventHandler lbExit_click;
         public bool isMute = false;
 
 
@@ -95,6 +96,14 @@ namespace Lab3_Game.UserControls
             //board.Show();
             //board.BringToFront();
             //this.Controls.Add(board);
+        }
+
+        private void lbBack_Click(object sender, EventArgs e)
+        {
+            if (lbExit_click != null)
+            {
+                lbExit_click.Invoke(this, e);
+            }
         }
     }
 }

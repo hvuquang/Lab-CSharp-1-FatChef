@@ -69,9 +69,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label2.Location = new System.Drawing.Point(282, 45);
+            this.label2.Location = new System.Drawing.Point(363, 56);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 31);
+            this.label2.Size = new System.Drawing.Size(211, 40);
             this.label2.TabIndex = 2;
             this.label2.Text = "Question: 0 / 5";
             // 
@@ -81,17 +82,19 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Salmon;
-            this.label1.Location = new System.Drawing.Point(574, 45);
+            this.label1.Location = new System.Drawing.Point(738, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 31);
+            this.label1.Size = new System.Drawing.Size(193, 40);
             this.label1.TabIndex = 3;
             this.label1.Text = "Score: 0 / 100";
             // 
             // pbWord
             // 
-            this.pbWord.Location = new System.Drawing.Point(356, 103);
+            this.pbWord.Location = new System.Drawing.Point(458, 127);
+            this.pbWord.Margin = new System.Windows.Forms.Padding(4);
             this.pbWord.Name = "pbWord";
-            this.pbWord.Size = new System.Drawing.Size(233, 243);
+            this.pbWord.Size = new System.Drawing.Size(300, 300);
             this.pbWord.TabIndex = 4;
             this.pbWord.TabStop = false;
             // 
@@ -101,10 +104,11 @@
             this.tbAnswer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbAnswer.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbAnswer.Location = new System.Drawing.Point(10, 10);
+            this.tbAnswer.Location = new System.Drawing.Point(13, 12);
+            this.tbAnswer.Margin = new System.Windows.Forms.Padding(4);
             this.tbAnswer.Name = "tbAnswer";
             this.tbAnswer.PlaceholderText = "Your answer here";
-            this.tbAnswer.Size = new System.Drawing.Size(335, 36);
+            this.tbAnswer.Size = new System.Drawing.Size(430, 45);
             this.tbAnswer.TabIndex = 5;
             // 
             // panel1
@@ -112,10 +116,11 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tbAnswer);
-            this.panel1.Location = new System.Drawing.Point(292, 450);
+            this.panel1.Location = new System.Drawing.Point(375, 556);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(357, 57);
+            this.panel1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel1.Size = new System.Drawing.Size(458, 70);
             this.panel1.TabIndex = 6;
             // 
             // label3
@@ -124,9 +129,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(767, 113);
+            this.label3.Location = new System.Drawing.Point(986, 140);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 31);
+            this.label3.Size = new System.Drawing.Size(163, 40);
             this.label3.TabIndex = 7;
             this.label3.Text = "Question 1:";
             // 
@@ -136,9 +142,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(767, 183);
+            this.label4.Location = new System.Drawing.Point(986, 226);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 31);
+            this.label4.Size = new System.Drawing.Size(167, 40);
             this.label4.TabIndex = 8;
             this.label4.Text = "Question 2:";
             // 
@@ -148,9 +155,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(767, 253);
+            this.label5.Location = new System.Drawing.Point(986, 313);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 31);
+            this.label5.Size = new System.Drawing.Size(167, 40);
             this.label5.TabIndex = 9;
             this.label5.Text = "Question 3:";
             // 
@@ -160,9 +168,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(767, 323);
+            this.label6.Location = new System.Drawing.Point(986, 399);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 31);
+            this.label6.Size = new System.Drawing.Size(168, 40);
             this.label6.TabIndex = 10;
             this.label6.Text = "Question 4:";
             // 
@@ -172,9 +181,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(767, 393);
+            this.label7.Location = new System.Drawing.Point(986, 485);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 31);
+            this.label7.Size = new System.Drawing.Size(167, 40);
             this.label7.TabIndex = 11;
             this.label7.Text = "Question 5:";
             // 
@@ -182,9 +192,10 @@
             // 
             this.lbBack.AutoSize = true;
             this.lbBack.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbBack.Location = new System.Drawing.Point(1010, 14);
+            this.lbBack.Location = new System.Drawing.Point(1299, 17);
+            this.lbBack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBack.Name = "lbBack";
-            this.lbBack.Size = new System.Drawing.Size(63, 31);
+            this.lbBack.Size = new System.Drawing.Size(79, 40);
             this.lbBack.TabIndex = 12;
             this.lbBack.Text = "Back";
             this.lbBack.Click += new System.EventHandler(this.label8_Click);
@@ -193,9 +204,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Lab3_Game.Properties.Resources.mute;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(30, 32);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(63, 62);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
@@ -203,10 +215,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(116, 528);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(149, 652);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 50);
+            this.button1.Size = new System.Drawing.Size(153, 62);
             this.button1.TabIndex = 24;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -216,10 +228,10 @@
             // 
             this.pbIsCorrect1.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect1.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect1.Location = new System.Drawing.Point(918, 103);
-            this.pbIsCorrect1.Margin = new System.Windows.Forms.Padding(2);
+            this.pbIsCorrect1.Location = new System.Drawing.Point(1180, 127);
+            this.pbIsCorrect1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbIsCorrect1.Name = "pbIsCorrect1";
-            this.pbIsCorrect1.Size = new System.Drawing.Size(49, 51);
+            this.pbIsCorrect1.Size = new System.Drawing.Size(63, 63);
             this.pbIsCorrect1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbIsCorrect1.TabIndex = 25;
             this.pbIsCorrect1.TabStop = false;
@@ -228,10 +240,10 @@
             // 
             this.pbIsCorrect2.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect2.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect2.Location = new System.Drawing.Point(918, 174);
-            this.pbIsCorrect2.Margin = new System.Windows.Forms.Padding(2);
+            this.pbIsCorrect2.Location = new System.Drawing.Point(1180, 215);
+            this.pbIsCorrect2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbIsCorrect2.Name = "pbIsCorrect2";
-            this.pbIsCorrect2.Size = new System.Drawing.Size(49, 51);
+            this.pbIsCorrect2.Size = new System.Drawing.Size(63, 63);
             this.pbIsCorrect2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbIsCorrect2.TabIndex = 26;
             this.pbIsCorrect2.TabStop = false;
@@ -240,10 +252,10 @@
             // 
             this.pbIsCorrect3.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect3.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect3.Location = new System.Drawing.Point(918, 243);
-            this.pbIsCorrect3.Margin = new System.Windows.Forms.Padding(2);
+            this.pbIsCorrect3.Location = new System.Drawing.Point(1180, 300);
+            this.pbIsCorrect3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbIsCorrect3.Name = "pbIsCorrect3";
-            this.pbIsCorrect3.Size = new System.Drawing.Size(49, 51);
+            this.pbIsCorrect3.Size = new System.Drawing.Size(63, 63);
             this.pbIsCorrect3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbIsCorrect3.TabIndex = 27;
             this.pbIsCorrect3.TabStop = false;
@@ -252,10 +264,10 @@
             // 
             this.pbIsCorrect4.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect4.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect4.Location = new System.Drawing.Point(918, 311);
-            this.pbIsCorrect4.Margin = new System.Windows.Forms.Padding(2);
+            this.pbIsCorrect4.Location = new System.Drawing.Point(1180, 384);
+            this.pbIsCorrect4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbIsCorrect4.Name = "pbIsCorrect4";
-            this.pbIsCorrect4.Size = new System.Drawing.Size(49, 51);
+            this.pbIsCorrect4.Size = new System.Drawing.Size(63, 63);
             this.pbIsCorrect4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbIsCorrect4.TabIndex = 28;
             this.pbIsCorrect4.TabStop = false;
@@ -264,10 +276,10 @@
             // 
             this.pbIsCorrect5.BackColor = System.Drawing.Color.Transparent;
             this.pbIsCorrect5.Image = global::Lab3_Game.Properties.Resources.correct;
-            this.pbIsCorrect5.Location = new System.Drawing.Point(918, 393);
-            this.pbIsCorrect5.Margin = new System.Windows.Forms.Padding(2);
+            this.pbIsCorrect5.Location = new System.Drawing.Point(1180, 485);
+            this.pbIsCorrect5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbIsCorrect5.Name = "pbIsCorrect5";
-            this.pbIsCorrect5.Size = new System.Drawing.Size(49, 51);
+            this.pbIsCorrect5.Size = new System.Drawing.Size(63, 63);
             this.pbIsCorrect5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbIsCorrect5.TabIndex = 29;
             this.pbIsCorrect5.TabStop = false;
@@ -278,9 +290,10 @@
             this.lbHint.BackColor = System.Drawing.Color.Transparent;
             this.lbHint.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbHint.ForeColor = System.Drawing.Color.Salmon;
-            this.lbHint.Location = new System.Drawing.Point(400, 393);
+            this.lbHint.Location = new System.Drawing.Point(514, 485);
+            this.lbHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbHint.Name = "lbHint";
-            this.lbHint.Size = new System.Drawing.Size(139, 31);
+            this.lbHint.Size = new System.Drawing.Size(176, 40);
             this.lbHint.TabIndex = 30;
             this.lbHint.Text = "Hint: --ange";
             // 
@@ -295,18 +308,20 @@
             this.countdownLabel.BackColor = System.Drawing.Color.Transparent;
             this.countdownLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.countdownLabel.ForeColor = System.Drawing.Color.White;
-            this.countdownLabel.Location = new System.Drawing.Point(768, 45);
+            this.countdownLabel.Location = new System.Drawing.Point(987, 56);
+            this.countdownLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.countdownLabel.Name = "countdownLabel";
-            this.countdownLabel.Size = new System.Drawing.Size(0, 31);
+            this.countdownLabel.Size = new System.Drawing.Size(0, 40);
             this.countdownLabel.TabIndex = 31;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Lab3_Game.Properties.Resources.add_button;
-            this.pictureBox1.Location = new System.Drawing.Point(588, 374);
+            this.pictureBox1.Location = new System.Drawing.Point(756, 462);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -318,9 +333,10 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSubmit.ForeColor = System.Drawing.Color.Purple;
-            this.btnSubmit.Location = new System.Drawing.Point(400, 528);
+            this.btnSubmit.Location = new System.Drawing.Point(514, 652);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(139, 53);
+            this.btnSubmit.Size = new System.Drawing.Size(179, 65);
             this.btnSubmit.TabIndex = 33;
             this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -328,7 +344,7 @@
             // 
             // UCPlayingScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Lab3_Game.Properties.Resources._11;
@@ -354,8 +370,9 @@
             this.Controls.Add(this.pbWord);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCPlayingScreen";
-            this.Size = new System.Drawing.Size(1076, 610);
+            this.Size = new System.Drawing.Size(1383, 754);
             ((System.ComponentModel.ISupportInitialize)(this.pbWord)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

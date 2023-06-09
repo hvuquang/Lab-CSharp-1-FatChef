@@ -66,9 +66,12 @@
             this.ucHomeScreen1.lbAnimal_click += new System.EventHandler<System.EventArgs>(this.ucHomeScreen1_lbAnimal_click);
             this.ucHomeScreen1.lbDictionary_click += new System.EventHandler<System.EventArgs>(this.ucHomeScreen1_lbDictionary_click);
             this.ucHomeScreen1.lbAchievement_click += new System.EventHandler<System.EventArgs>(this.ucHomeScreen1_lbAchievement_click);
+            this.ucHomeScreen1.lbExit_click += new System.EventHandler(this.ucHomeScreen1_lbExit_click);
             // 
             // ucDictionary1
             // 
+            this.ucDictionary1.BackColor = System.Drawing.SystemColors.Control;
+            this.ucDictionary1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucDictionary1.BackgroundImage")));
             this.ucDictionary1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucDictionary1.Location = new System.Drawing.Point(0, 0);
             this.ucDictionary1.Margin = new System.Windows.Forms.Padding(4);
@@ -97,6 +100,7 @@
             this.Controls.Add(this.ucPlayingScreen1);
             this.Controls.Add(this.ucDictionary1);
             this.Controls.Add(this.ucScoreBoard1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

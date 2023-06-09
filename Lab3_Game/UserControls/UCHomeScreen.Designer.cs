@@ -38,6 +38,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lbBack = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -162,6 +163,17 @@
             this.pictureBox7.TabIndex = 28;
             this.pictureBox7.TabStop = false;
             // 
+            // lbBack
+            // 
+            this.lbBack.AutoSize = true;
+            this.lbBack.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbBack.Location = new System.Drawing.Point(999, 12);
+            this.lbBack.Name = "lbBack";
+            this.lbBack.Size = new System.Drawing.Size(52, 31);
+            this.lbBack.TabIndex = 29;
+            this.lbBack.Text = "Exit";
+            this.lbBack.Click += new System.EventHandler(this.lbBack_Click);
+            // 
             // UCHomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -169,6 +181,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Lab3_Game.Properties.Resources._8;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.lbBack);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -202,5 +215,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox7;
+        private Label lbBack;
     }
 }

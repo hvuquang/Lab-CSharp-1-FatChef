@@ -16,6 +16,7 @@ namespace Lab3_Game.UserControls
     public partial class UCPlayingScreen : UserControl
     {
         public event EventHandler<EventArgs> back_click;
+        public event EventHandler<EventArgs> back_click1;
         public bool isMute = false;
 
         private string _type;
@@ -36,6 +37,11 @@ namespace Lab3_Game.UserControls
         public UCPlayingScreen()
         {
             InitializeComponent();
+        }
+
+        public void back_click1Click(EventArgs e)
+        {
+            back_click1.Invoke(this, e);
         }
 
         public UCPlayingScreen(string type)
@@ -157,6 +163,7 @@ namespace Lab3_Game.UserControls
         {
             if (back_click != null)
             {
+                timer1_Tick.Stop();
                 back_click.Invoke(this, e);
                 pbWord.Image = null;
             }
@@ -183,7 +190,9 @@ namespace Lab3_Game.UserControls
         {
             if (increImage >= 5)
             {
+                timer1_Tick.Stop();
                 button1.Text = "DONE";
+                this.Hide();
                 CongratulationForm congratulationForm = new CongratulationForm(correctAnswer,score,mode, _type);
                 congratulationForm.ShowDialog();
                 return;

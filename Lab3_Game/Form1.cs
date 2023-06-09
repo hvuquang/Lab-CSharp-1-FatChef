@@ -96,5 +96,10 @@ namespace Lab3_Game
             ucHomeScreen1.Show();
             ucHomeScreen1.BringToFront();
         }
+
+        private void ucHomeScreen1_lbExit_click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
